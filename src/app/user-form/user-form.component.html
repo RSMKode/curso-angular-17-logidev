@@ -1,0 +1,8 @@
+<form id="form" action="">
+  <h1>Formulario de Usuario</h1>
+  <input (input)="input($event)" type="text" name="" id="" />
+  <span>{{ inputMessage }}</span>
+  <button [disabled]="isButtonDisabled" (click)="saveData($event)">
+    Guardar datos
+  </button>
+</form>
