@@ -1,4 +1,8 @@
+@use '@/styles/variables/typography.scss' as typo;
 .app-container {
+  // font-family: 'Poppins-Black';
+  font-family: typo.$main-family-black, sans-serif;
+
   display: flex;
   flex-direction: column;
   align-items: center;
