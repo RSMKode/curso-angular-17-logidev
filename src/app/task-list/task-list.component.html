@@ -1,0 +1,22 @@
+<section>
+  <h2>Task List</h2>
+  <ul>
+    @for (task of tasks; track $index) {
+    <li
+      [class]="{
+      'task-completed': task.status === 'Completada',
+      'task-in-progress': task.status === 'En progreso'
+      }"
+      >
+      <span>{{ task.name }}</span>
+      <select [(ngModel)]="task.status"
+      (change)="changeStatus(task)">
+        <option *ngFor="let status of taskStatus" [value]="status" [selected]="task.status === status">
+          {{ status }}
+        </option>
+        <!-- <button (click)="deleteTask(task.id)">Delete</button> -->
+      </select>
+    </li>
+    }
+  </ul>
+</section>
