@@ -1,0 +1,10 @@
+<div class="grid-container">
+  <app-header/>
+  <app-nav/>
+  <main>
+    <h2>CONTENIDO</h2>
+    <input type="text" placeholder="Ingresa tu nombre" [(ngModel)]="inputName">
+    <span>Nombre ingresado: {{ inputName }}</span>
+    <button (click)="clickButton()">Enter</button>
+  </main>
+</div>

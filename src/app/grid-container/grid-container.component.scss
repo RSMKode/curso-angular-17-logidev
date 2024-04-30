@@ -1,0 +1,31 @@
+:host {
+  width: 100%;
+  height: 100%;
+}
+.grid-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+    "grid-header grid-header grid-header grid-header"
+    "grid-aside grid-main grid-main grid-main"
+    "grid-aside grid-main grid-main grid-main"
+    "grid-aside grid-main grid-main grid-main"
+    "grid-aside grid-main grid-main grid-main";
+  padding: 1rem;
+  gap: 1rem;
+}
+
+app-header {
+  grid-area: grid-header;
+}
+app-nav {
+  grid-area: grid-aside;
+}
+
+main {
+  display: grid;
+  place-content: start center;
+  grid-area: grid-main;
+  background-color: darkred;
+}
