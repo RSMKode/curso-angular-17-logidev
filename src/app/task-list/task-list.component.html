@@ -1,7 +1,12 @@
 <section>
   <h2>Task List</h2>
+  <section>
+    <input [(ngModel)]="inputValue" type="text" placeholder="Ingresa una tarea">
+    <button (click)="updateTask()">Actualizar Tarea</button>
+    <button (click)="refresh()">Actualizar Lista</button>
+  </section>
   <ul>
-    @for (task of tasks; track $index) {
+    @for (task of tasks; track $index ) {
     <li
       [class]="{
       'task-completed': task.status === 'Completada',
@@ -12,10 +17,15 @@
       <span>{{ task.name }}</span>
       <select [(ngModel)]="task.status"
       (change)="changeStatus(task)">
-        <option *ngFor="let status of taskStatus" [value]="status" [selected]="task.status === status">
+      @for (status of taskStatus; track $index) {
+        <option [value]="status" [selected]="task.status === status">
           {{ status }}
         </option>
         <!-- <button (click)="deleteTask(task.id)">Delete</button> -->
+      }
+        <!-- <option *ngFor="let status of taskStatus" [value]="status" [selected]="task.status === status">
+          {{ status }}
+        </option> -->
       </select>
     </li>
     }

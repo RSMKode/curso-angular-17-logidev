@@ -17,6 +17,7 @@ import {
 export class TaskListComponent {
   taskStatus: StatusType[] = ['Completada', 'En progreso', 'Pendiente'];
   tastPriority: PriorityType[] = ['Alta', 'Media', 'Baja'];
+
   tasks: ITask[] = [
     {
       name: 'Tarea 1',
@@ -41,4 +42,17 @@ export class TaskListComponent {
   changeStatus(task: any) {
     console.log(task);
   }
+
+  inputValue = '';
+
+  updateTask(): void {
+    this.tasks.push({
+      name: this.inputValue,
+      description: 'Descripción de ' + this.inputValue,
+      status: 'Pendiente',
+      priority: 'Media',
+    });
+  }
+
+  refresh(): void {}
 }
