@@ -8,6 +8,7 @@
       'task-in-progress': task.status === 'En progreso'
       }"
       >
+      <p>Tarea Nº {{ $index + 1 }}</p>
       <span>{{ task.name }}</span>
       <select [(ngModel)]="task.status"
       (change)="changeStatus(task)">

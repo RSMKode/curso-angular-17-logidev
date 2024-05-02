@@ -16,9 +16,10 @@ section {
   }
 
   li {
-    width: fit-content;
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    // flex-wrap: wrap;
     gap: 0.5rem;
     padding: 0.5rem;
     border: 2px solid white;
