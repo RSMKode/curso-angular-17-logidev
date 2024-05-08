@@ -2,13 +2,13 @@
   min-height: 100dvh;
   width: 100dvw;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  padding:1rem;
+  padding: 1rem;
 }
 
-task-list{
+task-list {
   width: 100%;
 }

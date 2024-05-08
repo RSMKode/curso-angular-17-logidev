@@ -1,0 +1,28 @@
+<div class="botones">
+  <button mat-raised-button (click)="getPreviousPokemonList()">Anterior</button>
+  <button mat-raised-button (click)="getNextPokemonList()">Siguiente</button>
+</div>
+<div class="container">
+  <div class="grid">
+    @for (pokemon of pokemonList; track $index) {
+    <mat-card (click)="clickItem(pokemon)">
+      <mat-card-content>
+        <div class="pokemon">
+          @if(pokemon.sprites.front_default){
+          <img src="{{ pokemon.sprites.front_default }}" alt="" />
+          }
+          <div>{{ pokemon.name | uppercase }}</div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    }
+  </div>
+  @if(selectedPokemon != null){
+  <app-pokemon
+    [pokemon]="selectedPokemon"
+    (deletePokemon)="deletePokemon($event)"
+  />
+  } @else {
+  <button mat-raised-button>Selecciona un Pokemon</button>
+  }
+</div>

@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     MatButtonModule,
     MatTooltipModule,
     MatButtonToggleModule,
+    PokemonListComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
