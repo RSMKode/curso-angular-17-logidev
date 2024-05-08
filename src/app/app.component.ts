@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TaskListComponent } from './task-list/task-list.component';
-
+import { OnlyTextDirective } from './directives/only-text.directive';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, TaskListComponent],
+  imports: [RouterOutlet, OnlyTextDirective, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'curso-angular-17-logidev';
-  description = 'Curso de Angular 17';
+  inputText = '';
 }
